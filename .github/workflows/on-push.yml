@@ -28,6 +28,6 @@ jobs:
           exit 1
 
       - name: 'Validation taks'
-        if: github.event_name == "push" && github.event.pull_request.merged == true
+        if: github.event_name == "pull_request" && github.event.pull_request.merged == true
         run: echo ">>> Running validation..."
     
