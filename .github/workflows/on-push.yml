@@ -18,19 +18,11 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.7
-          secrets:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 'Run tests'
         uses: actions/python-unittest@v2
         with:
           python-version: 3.7
-          secrets:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           run:
             - echo ">>> Running tests..." >> $GITHUB_ENV
     
