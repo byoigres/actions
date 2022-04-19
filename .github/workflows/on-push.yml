@@ -23,6 +23,5 @@ jobs:
         uses: actions/python-unittest@v2
         with:
           python-version: 3.7
-          run:
-            - echo ">>> Running tests..." >> $GITHUB_ENV
+          run: echo ">>> Running tests..." >> $GITHUB_ENV
     
