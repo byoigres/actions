@@ -19,6 +19,15 @@ jobs:
         with:
           python-version: 3.7
 
-      - name: 'Run tests'
-        run: echo ">>> Running tests..."
+      - name: 'Starting task'
+        run: echo ">>> Starting task..."
+
+      - name: 'Failing task'
+        run: |
+          echo ">>> Running tests..."
+          exit 1
+
+      - name: 'Validation taks'
+        if: github.event_name == "push" && github.event.pull_request.merged == true
+        run: echo ">>> Running validation..."
     
