@@ -20,7 +20,5 @@ jobs:
           python-version: 3.7
 
       - name: 'Run tests'
-        with:
-          python-version: 3.7
         run: echo ">>> Running tests..." >> $GITHUB_ENV
     
