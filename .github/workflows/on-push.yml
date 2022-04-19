@@ -31,6 +31,5 @@ jobs:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          run:
-            - echo ">>> Running tests..." >> $GITHUB_ENV
+          run: echo ">>> Running tests..." >> $GITHUB_ENV
     
